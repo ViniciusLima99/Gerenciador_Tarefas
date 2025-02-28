@@ -1,0 +1,19 @@
+@model gerenciadorTarefas.Models.Tarefas
+
+<h2>Editar Tarefa</h2>
+
+<form method="post" asp-action="Editar">
+    <input type="hidden" asp-for="Id" />
+
+    <div>
+        <label for="Titulo">Titulo</label>
+        <input type="text" id="Titulo" name="Titulo" asp-for="Titulo" />
+    </div>
+
+    <div>
+        <label for="Descricao">Descrição</label>
+        <textarea id="Descricao" name="Descricao" asp-for="Descricao"></textarea>
+    </div>
+
+    <button type="submit">Salvar</button>
+</form>

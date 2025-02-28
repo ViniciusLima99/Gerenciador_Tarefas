@@ -1,0 +1,29 @@
+﻿@model IEnumerable<gerenciadorTarefas.Models.Tarefas>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Titulo</th>
+            <th>Descrição</th>
+            <th>Data de Criação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tarefa in Model ?? Enumerable.Empty<Tarefas>())
+        {
+            <tr>
+                <td>@tarefa.Id</td>
+                <td>@tarefa.Titulo</td>
+                <td>@tarefa.Descricao</td>
+                <td>@tarefa.DataConclusao.ToShortDateString()</td>
+                <td>
+                    <a href="@Url.Action("Editar", new { id = tarefa.Id })">Editar</a> |
+                    <a href="@Url.Action("Excluir", new { id = tarefa.Id })" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Criar")" class="btn btn-primary">Nova Tarefa</a>

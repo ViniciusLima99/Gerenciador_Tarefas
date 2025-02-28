@@ -1,0 +1,12 @@
+@model gerenciadorTarefas.Models.Tarefas
+
+<h2>Excluir Tarefa</h2>
+
+<form method="post" asp-action="Excluir">
+    <input type="hidden" asp-for="Id" />
+
+    <p>Tem certeza que deseja excluir a tarefa <strong>@Model.Titulo</strong>?</p>
+
+    <button type="submit">Excluir</button>
+    <a href="@Url.Action("Index", "Task")">Cancelar</a>
+</form>

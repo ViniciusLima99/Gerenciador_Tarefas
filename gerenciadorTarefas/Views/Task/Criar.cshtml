@@ -1,0 +1,22 @@
+@model gerenciadorTarefas.Models.Tarefas
+
+<div class="home-container">
+    <h2 class="mb-4">Criar Tarefa</h2>
+
+    <form method="post" class="form-group" asp-action="Criar">
+        <div class="mb-3">
+            <label for="Titulo" class="form-label">Título</label>
+            <input type="text" id="Titulo" name="Titulo" class="form-control" placeholder="Digite o título da tarefa" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Descricao" class="form-label">Descrição</label>
+            <textarea id="Descricao" name="Descricao" class="form-control" rows="4" placeholder="Descreva a tarefa" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Criar</button>
+    </form>
+
+
+</div>
+

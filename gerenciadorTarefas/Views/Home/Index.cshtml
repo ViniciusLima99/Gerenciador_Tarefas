@@ -1,0 +1,14 @@
+﻿@model IEnumerable<gerenciadorTarefas.Models.Tarefas>
+
+<div class="home-container">
+    <h1 class="principal">
+        O Melhor Gerenciador de Tarefas do mundo!
+    </h1>
+
+    <div class="links">
+        <a href="@Url.Action("Index", "Task")" class="btn btn-primary link-item">Listar Tarefas</a>
+        <a href="@Url.Action("Criar", "Task")" class="btn btn-primary link-item">Nova Tarefa</a>
+    </div>
+
+</div>
+
